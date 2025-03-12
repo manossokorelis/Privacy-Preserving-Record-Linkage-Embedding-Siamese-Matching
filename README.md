@@ -1,2 +1,5 @@
 # Privacy-Preserving-Record-Linkage-Embedding-Siamese-Matching
-A privacy-preserving record linkage system using Siamese Neural Networks and differential privacy techniques for embedding matching. The model aims to link records from different datasets while ensuring data privacy.
+
+Repository Structure
+- Embedding-Siamese-Matching.ipynb: This Jupyter notebook with the implementation of the Siamese network for record linkage, incorporating differential privacy to protect sensitive data.
+- data: Sample datasets which used in the study.
