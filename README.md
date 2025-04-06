@@ -1,5 +1,8 @@
 # Privacy-Preserving-Record-Linkage-Embedding-Siamese-Matching
+This project focuses on developing a privacy-preserving record linkage system that uses embeddings generated from textual data to match records across two datasets. The approach leverages the Siamese Neural Network (SiameseNN) architecture, which compares pairs of embeddings generated from the textual fields of the datasets. To ensure privacy, differential privacy (DP) techniques are applied to the embeddings by adding Gaussian noise, allowing for secure matching of records without compromising sensitive information. The system integrates pre-trained sentence transformers for generating textual embeddings and computes a similarity score to classify matched pairs. This project is aimed at improving data linkage while maintaining privacy in various applications, such as healthcare, finance, and social data analysis.
 
-Repository Structure:
-- Embedding-Siamese-Matching.ipynb: The Jupyter notebook with the implementation of the Siamese network for record linkage, incorporating differential privacy to protect sensitive data.
-- data: Sample datasets which used in the study.
+Key Achievements:
+- Utilized a pre-trained Sentence Transformer model (all-MiniLM-L12-v2) to generate high-quality text embeddings for each record in both datasets, ensuring semantic information was captured for matching purposes.
+- Incorporated differential privacy (DP) to protect sensitive data by adding Gaussian noise to the generated embeddings, allowing for privacy-preserving matching of records.
+- Implemented a Siamese Neural Network to compare embeddings for record linkage. The model computes the absolute difference between embeddings from two records and uses a fully connected network to predict whether the records match or not.
+- Trained the SiameseNN model using a balanced binary cross-entropy loss function, accounting for class imbalances in the dataset through class weighting. The model was optimized using the Adam optimizer.
